@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/13730d0840.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="Javascript/translator.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
+    </style>
+    <title>Morce Code Translator</title>
+  </head>
+  <body class="body">
+    <section class="landing-page">
+      <h1>Morce Code Translator</h1>
+      <div class="section__input-box--english">
+        <h3>English</h3>
+        <textarea
+          name="textarea__input--english"
+          id="textarea__input--english"
+          class="textarea__input--english"
+          placeholder=""
+          oninput="text2morse()"
+        ></textarea>
+      </div>
+      <div class="section__buttons--flex">
+        <div class="section__english--submit">
+          <input
+            type="radio"
+            class="button__english--submit"
+            id="button__english--submit"
+            aria-checked="true"
+          />
+          <label
+            for="input__box--eng"
+            class="input__box--eng"
+            id="input__box--eng"
+            ><i class="fa-solid fa-arrow-down"></i
+          ></label>
+          <span class="tooltip">To Morce</span>
+        </div>
+        <div class="button__reset" id="button__reset">
+          <label for="reset-button" class="reset-button" id="reset-button"
+            ><i class="fa fa-refresh" aria-hidden="true"></i
+          ></label>
+        </div>
+        <div class="section__morce--submit">
+          <input
+            type="radio"
+            class="button__morce--submit"
+            id="button__morce--submit"
+            aria-checked="false"
+          />
+          <label
+            for="input__box--morce"
+            class="input__box--morce"
+            id="input__box--morce"
+            ><i class="fa-solid fa-arrow-up"></i
+          ></label>
+        </div>
+      </div>
+      <div class="section__input--morce">
+        <h3>Morce</h3>
+        <textarea
+          name="textarea__input--morce"
+          id="textarea__input--morce"
+          class="textarea__input--morce"
+          placeholder=""
+          oninput="morse2text()"
+        ></textarea>
+      </div>
+      <div class="footer--name">Build by Srilekha</div>
+    </section>
+  </body>
+</html>
