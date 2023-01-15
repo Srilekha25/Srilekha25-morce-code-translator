@@ -1,6 +1,6 @@
 .body {
   font-family: "Roboto Mono", monospace;
-  margin-top: 10%;
+  margin-top: 5%;
   background-color: #f5cac3;
   color: white;
 }
@@ -31,8 +31,8 @@
   border-radius: 10px;
 }
 .body .landing-page .section__input-box--english {
-  padding: 10px;
-  margin: 10px;
+  padding: 20px;
+  margin: 20px;
 }
 .body .landing-page .section__input-box--english .textarea__input--english {
   width: 70vw;
@@ -40,9 +40,15 @@
   resize: vertical;
   border-radius: 10px;
 }
-.body .landing-page .section__buttons--flex {
+.body .landing-page .container__buttons--flex--row {
   display: flex;
   flex-direction: row;
+}
+.body .landing-page .section__english--submit {
+  position: relative;
+}
+.body .landing-page .button__english--submit {
+  display: none;
 }
 .body .landing-page .input__box--eng {
   padding: 10px;
@@ -54,6 +60,83 @@
 }
 .body .landing-page .input__box--eng:hover i {
   color: black;
+}
+.body .landing-page .tooltip {
+  visibility: hidden;
+  width: 100px;
+  background-color: #84a59d;
+  color: #fff;
+  text-align: center;
+  padding: 3px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 100%;
+  font-size: 12px;
+  font-family: monospace;
+}
+.body .landing-page .section__english--submit .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #84a59d;
+}
+.body .landing-page .section__english--submit:hover .tooltip {
+  visibility: visible;
+}
+.body .landing-page .button__reset {
+  position: relative;
+}
+.body .landing-page .button__reset .tooltip {
+  visibility: hidden;
+  width: 80px;
+  background-color: #84a59d;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 160%;
+  left: 80%;
+  margin-left: -60px;
+}
+.body .landing-page .button__reset .tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #84a59d transparent;
+}
+.body .landing-page .button__reset:hover .tooltip {
+  visibility: visible;
+}
+.body .landing-page .section__morce--submit {
+  position: relative;
+}
+.body .landing-page .section__morce--submit .tooltip {
+  position: absolute;
+  left: 110%;
+}
+.body .landing-page .section__morce--submit .tooltip::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #84a59d transparent transparent;
+}
+.body .landing-page .section__morce--submit:hover .tooltip {
+  visibility: visible;
 }
 .body .landing-page .input__box--morce {
   padding: 10px;
@@ -80,9 +163,6 @@
 .body .landing-page textarea {
   border: 1px solid black;
 }
-.body .landing-page .button__english--submit {
-  display: none;
-}
 .body .landing-page .button__morce--submit {
   display: none;
 }
@@ -91,14 +171,21 @@
   border-radius: 10px;
 }
 .body .landing-page .section__input--morce {
-  padding: 10px;
-  margin: 10px;
+  padding: 20px;
+  margin: 20px;
+  position: relative;
 }
-.body .landing-page .textarea__input--morce {
+.body .landing-page .section__input--morce .textarea__input--morce {
   width: 70vw;
   height: 15vh;
   resize: vertical;
   border-radius: 10px;
+}
+.body .landing-page .section__input--morce .container__buttons-for-morce {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 .body .landing-page .footer--name {
   padding: 10px;

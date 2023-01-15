@@ -101,8 +101,10 @@ function morse2text() {
 const resetButton = document.querySelector("#reset-button");
 let inputEnglish = document.querySelector("#textarea__input--english");
 let inputMorce = document.querySelector("#textarea__input--morce");
-let buttonInputEnglish = document.querySelector("#button__english--submit");
-let buttonInputMorce = document.querySelector("#button__morce--submit");
+let radioButtonEnglish = document.querySelector("#button__english--submit");
+let radioButtonMorce = document.querySelector("#button__morce--submit");
+let labelInput = document.querySelector("#input__box--eng");
+let labelMorce = document.querySelector("#input__box--morce");
 let body = document.querySelector("#landing-page");
 
 resetButton.addEventListener("click", (event) => {
@@ -113,8 +115,7 @@ resetButton.addEventListener("click", (event) => {
   inputEnglish.disabled = false;
 });
 
-
-buttonInputEnglish.addEventListener("click", (event) => {
+labelInput.addEventListener("click", (event) => {
   event.preventDefault();
   inputMorce.disabled = true;
   inputEnglish.disabled = false;
@@ -122,7 +123,7 @@ buttonInputEnglish.addEventListener("click", (event) => {
   inputMorce.setAttribute("placeholder", "Translates to Morce code here.");
 });
 
-buttonInputMorce.addEventListener("click", (event) => {
+labelMorce.addEventListener("click", (event) => {
   event.preventDefault();
   inputEnglish.disabled = true;
   inputMorce.disabled = false;
@@ -131,3 +132,35 @@ buttonInputMorce.addEventListener("click", (event) => {
   inputEnglish.setAttribute("placeholder", "Translates to English text here.");
 });
 
+inputEnglish.addEventListener('change', (e) => {
+  console.log("inside on change");
+  morse2text();
+});
+
+let dot = document.querySelector(".dot");
+let slash = document.querySelector(".slash");
+let space = document.querySelector(".space");
+let back = document.querySelector(".back");
+let buttonsForMorce = document.querySelector(".container__buttons-for-morce");
+
+var morcebtns = document
+  .querySelector(".container__buttons-for-morce")
+  .querySelectorAll("button");
+morcebtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (btn.className == "dot") {
+      inputMorce.value += ".";
+    } else if (btn.className == "slash") {
+      inputMorce.value += "/";
+    } else if (btn.className == "space") {
+      inputMorce.value += " ";
+    } else if (btn.className == "back") {
+      inputMorce.value = inputMorce.value.substr(
+        0,
+        inputMorce.value.length - 1
+      );
+    } else {
+      inputMorce.value;
+    }
+  });
+});

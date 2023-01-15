@@ -1,6 +1,6 @@
 .body {
   font-family: "Roboto Mono", monospace;
-  margin-top: 10%;
+  margin-top: 5%;
   background-color: #f5cac3;
   color: white;
 
@@ -32,8 +32,8 @@
       border-radius: 10px;
     }
     .section__input-box--english {
-      padding: 10px;
-      margin: 10px;
+      padding: 20px;
+      margin: 20px;
       .textarea__input--english {
         width: 70vw;
         height: 15vh;
@@ -41,18 +41,18 @@
         border-radius: 10px;
       }
     }
-    
-    
-        .section__buttons--flex {
-          display: flex;
-          flex-direction: row;
-          .section__english--submit{
-        }
 
-      }
-     
-    
-    .input__box--eng{
+    .container__buttons--flex--row {
+      display: flex;
+      flex-direction: row;
+    }
+    .section__english--submit {
+      position: relative;
+    }
+    .button__english--submit {
+      display: none;
+    }
+    .input__box--eng {
       padding: 10px;
       border: 1px solid black;
       color: green;
@@ -63,7 +63,89 @@
         color: black;
       }
     }
-    .input__box--morce{
+    .tooltip {
+      visibility: hidden;
+      width: 100px;
+      background-color: #84a59d;
+      color: #fff;
+      text-align: center;
+      padding: 3px 0;
+      position: absolute;
+      z-index: 1;
+      top: -5px;
+      right: 100%;
+      font-size: 12px;
+      font-family: monospace;
+    }
+    .section__english--submit .tooltip::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent transparent #84a59d;
+    }
+    .section__english--submit:hover .tooltip {
+      visibility: visible;
+    }
+
+    .button__reset {
+      position: relative;
+    }
+    .button__reset .tooltip {
+      visibility: hidden;
+      width: 80px;
+      background-color: #84a59d;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 160%;
+      left: 80%;
+      margin-left: -60px;
+    }
+
+    .button__reset .tooltip::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent #84a59d transparent;
+    }
+    .button__reset:hover .tooltip {
+      visibility: visible;
+    }
+
+    .section__morce--submit {
+      position: relative;
+      .tooltip {
+        position: absolute;
+        left: 110%;
+      }
+    }
+
+    .section__morce--submit .tooltip::after {
+      content: " ";
+      position: absolute;
+      top: 50%;
+      right: 100%; /* To the left of the tooltip */
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent #84a59d transparent transparent;
+    }
+    .section__morce--submit:hover .tooltip {
+      visibility: visible;
+    }
+
+    .input__box--morce {
       padding: 10px;
       border: 1px solid black;
       color: red;
@@ -74,7 +156,7 @@
         color: black;
       }
     }
-    .reset-button{
+    .reset-button {
       padding: 10px;
       border: 1px solid black;
       color: black;
@@ -89,30 +171,35 @@
       border: 1px solid black;
     }
 
-    
-    .button__english--submit {
-      display: none;
-    }
-    .button__morce--submit{
+    .button__morce--submit {
       display: none;
     }
     label {
       margin: 10px;
       border-radius: 10px;
     }
-    
-    .section__input--morce{
-      padding: 10px;
-      margin: 10px;
+
+    .section__input--morce {
+      padding: 20px;
+      margin: 20px;
+      position: relative;
+      
+      .textarea__input--morce {
+        width: 70vw;
+        height: 15vh;
+        resize: vertical;
+        border-radius: 10px;
+      }
+      .container__buttons-for-morce{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
     }
 
    
-    .textarea__input--morce {
-      width: 70vw;
-      height: 15vh;
-      resize: vertical;
-      border-radius: 10px;
-    }
+    
     .footer--name {
       padding: 10px;
       margin: 10px;

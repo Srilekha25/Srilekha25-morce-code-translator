@@ -28,13 +28,14 @@
           oninput="text2morse()"
         ></textarea>
       </div>
-      <div class="section__buttons--flex">
+      <!-- Buttons for Translator -->
+      <div class="container__buttons--flex--row">
         <div class="section__english--submit">
           <input
             type="radio"
             class="button__english--submit"
             id="button__english--submit"
-            aria-checked="true"
+            checked="true"
           />
           <label
             for="input__box--eng"
@@ -42,12 +43,13 @@
             id="input__box--eng"
             ><i class="fa-solid fa-arrow-down"></i
           ></label>
-          <span class="tooltip">To Morce</span>
+          <span class="tooltip">Translate to Morce</span>
         </div>
         <div class="button__reset" id="button__reset">
           <label for="reset-button" class="reset-button" id="reset-button"
             ><i class="fa fa-refresh" aria-hidden="true"></i
           ></label>
+          <span class="tooltip">Clear</span>
         </div>
         <div class="section__morce--submit">
           <input
@@ -62,6 +64,7 @@
             id="input__box--morce"
             ><i class="fa-solid fa-arrow-up"></i
           ></label>
+          <span class="tooltip">Translate to English</span>
         </div>
       </div>
       <div class="section__input--morce">
@@ -73,7 +76,14 @@
           placeholder=""
           oninput="morse2text()"
         ></textarea>
+        <div class="container__buttons-for-morce">
+          <button class="dot">.</button>
+          <button class="slash">/</button>
+          <button class="space">␣</button>
+          <button class="back">⌫</button>
+        </div>
       </div>
+      
       <div class="footer--name">Build by Srilekha</div>
     </section>
   </body>
