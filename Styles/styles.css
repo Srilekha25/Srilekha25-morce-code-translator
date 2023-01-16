@@ -1,7 +1,7 @@
 .body {
   font-family: "Roboto Mono", monospace;
   margin-top: 5%;
-  background-color: #f5cac3;
+  background-color: #84a59d;
   color: white;
 }
 .body .landing-page {
@@ -21,10 +21,10 @@
 }
 .body .landing-page h1 {
   text-align: center;
-  color: #637a75;
+  color: #f5cac3;
 }
 .body .landing-page h3 {
-  background-color: #84a59d;
+  background-color: #f5cac3;
   padding: 0.5%;
   margin: 0%;
   left: 20px;
@@ -64,7 +64,7 @@
 .body .landing-page .tooltip {
   visibility: hidden;
   width: 100px;
-  background-color: #84a59d;
+  background-color: #f5cac3;
   color: #fff;
   text-align: center;
   padding: 3px 0;
@@ -83,7 +83,7 @@
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent transparent #84a59d;
+  border-color: transparent transparent transparent #f5cac3;
 }
 .body .landing-page .section__english--submit:hover .tooltip {
   visibility: visible;
@@ -94,7 +94,7 @@
 .body .landing-page .button__reset .tooltip {
   visibility: hidden;
   width: 80px;
-  background-color: #84a59d;
+  background-color: #f5cac3;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -113,7 +113,7 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent #84a59d transparent;
+  border-color: transparent transparent #f5cac3 transparent;
 }
 .body .landing-page .button__reset:hover .tooltip {
   visibility: visible;
@@ -133,7 +133,7 @@
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent #84a59d transparent transparent;
+  border-color: transparent #f5cac3 transparent transparent;
 }
 .body .landing-page .section__morce--submit:hover .tooltip {
   visibility: visible;
@@ -190,5 +190,5 @@
 .body .landing-page .footer--name {
   padding: 10px;
   margin: 10px;
-  color: #637a75;
+  color: #f5cac3;
 }/*# sourceMappingURL=styles.css.map */
