@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/13730d0840.js"
       crossorigin="anonymous"
     ></script>
-    <script src="Javascript/translator.js" defer></script>
+    <script src="./Javascript/script.js" defer type="module"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
     </style>
@@ -25,6 +25,7 @@
           id="textarea__input--english"
           class="textarea__input--english"
           placeholder=""
+    
         ></textarea>
       </div>
       <!-- Buttons for Translator -->
@@ -73,16 +74,15 @@
           id="textarea__input--morse"
           class="textarea__input--morse"
           placeholder=""
-          oninput="morse2text()"
         ></textarea>
-        <div class="container__buttons-for-morse">
+        <div class="container__buttons-for-morse" id="container__buttons-for-morse">
           <button class="dot">.</button>
           <button class="slash">/</button>
           <button class="space">␣</button>
           <button class="back">⌫</button>
         </div>
       </div>
-      
+      <div>Output displays 🤷 when <em>"no match"</em> is found.</div>
       <div class="footer--name">Build by Srilekha</div>
     </section>
   </body>

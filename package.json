@@ -1,0 +1,22 @@
+{
+  "name": "srilekha25-morce-code-translator",
+  "version": "1.0.0",
+  "description": "morce-code-translator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Srilekha25/Srilekha25-morce-code-translator.git"
+  },
+  "author": "srilekha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Srilekha25/Srilekha25-morce-code-translator/issues"
+  },
+  "homepage": "https://github.com/Srilekha25/Srilekha25-morce-code-translator#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
