@@ -123,7 +123,7 @@
       visibility: visible;
     }
 
-    .section__morce--submit {
+    .section__morse--submit {
       position: relative;
       .tooltip {
         position: absolute;
@@ -131,7 +131,7 @@
       }
     }
 
-    .section__morce--submit .tooltip::after {
+    .section__morse--submit .tooltip::after {
       content: " ";
       position: absolute;
       top: 50%;
@@ -141,16 +141,16 @@
       border-style: solid;
       border-color: transparent #f5cac3 transparent transparent;
     }
-    .section__morce--submit:hover .tooltip {
+    .section__morse--submit:hover .tooltip {
       visibility: visible;
     }
 
-    .input__box--morce {
+    .input__box--morse {
       padding: 10px;
       border: 1px solid black;
       color: red;
     }
-    .input__box--morce:hover {
+    .input__box--morse:hover {
       background-color: red;
       i {
         color: black;
@@ -171,7 +171,7 @@
       border: 1px solid black;
     }
 
-    .button__morce--submit {
+    .button__morse--submit {
       display: none;
     }
     label {
@@ -179,18 +179,18 @@
       border-radius: 10px;
     }
 
-    .section__input--morce {
+    .section__input--morse {
       padding: 20px;
       margin: 20px;
       position: relative;
       
-      .textarea__input--morce {
+      .textarea__input--morse {
         width: 70vw;
         height: 15vh;
         resize: vertical;
         border-radius: 10px;
       }
-      .container__buttons-for-morce{
+      .container__buttons-for-morse{
         position: absolute;
         display: flex;
         flex-direction: row;

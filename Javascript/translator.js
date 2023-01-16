@@ -46,7 +46,7 @@ const mapping = {
 	"@": ".--.-.",
 	"(": "-.--.",
 	")": "-.--.-",
-	" ": "/",
+	" ": " ",
 };
 
 //Text to Morce translator
@@ -65,10 +65,10 @@ var englishSubmitButton = document.getElementById("button__english--submit");
 //   morse2text();
 // });
 
-const textToMorce = () =>{
+const textToMorse = () =>{
   var inputValue = document.getElementById("textarea__input--english").value.toUpperCase();
   let splittedInputValue = inputValue.split("");
-  let translatedToMorce = splittedInputValue.map((character)=>{
+  let translatedToMorse = splittedInputValue.map((character)=>{
     if(!mapping[character]){
       return "�";
     }
@@ -76,7 +76,7 @@ const textToMorce = () =>{
       return mapping[character];
     }
   });
-  document.getElementById("textarea__input--morce").value = translatedToMorce.join(" ");
+  document.getElementById("textarea__input--morce").value = translatedToMorse.join(" ");
 };
 
 
@@ -87,7 +87,7 @@ function getKey(obj, val) {
 
 //Morce to text convertor
 function morse2text() {
-  let code = document.getElementById("textarea__input--morce").value;
+  let code = document.getElementById("textarea__input--morse").value;
   let arr1 = code.split(" ");
 
   let arr2 = arr1.map((x) => {
@@ -107,23 +107,24 @@ function morse2text() {
 
 const resetButton = document.querySelector("#reset-button");
 let inputEnglish = document.querySelector("#textarea__input--english");
-let inputMorce = document.querySelector("#textarea__input--morce");
+let inputMorse = document.querySelector("#textarea__input--morse");
 let radioButtonEnglish = document.querySelector("#button__english--submit");
-let radioButtonMorce = document.querySelector("#button__morce--submit");
+let radioButtonMorse = document.querySelector("#button__morse--submit");
 let labelInput = document.querySelector("#input__box--eng");
-let labelMorce = document.querySelector("#input__box--morce");
+let labelMorse = document.querySelector("#input__box--morse");
 let body = document.querySelector("#landing-page");
 
-inputMorce.disabled=true;
+inputMorse.disabled=true;
 inputEnglish.setAttribute("placeholder", "Enter the English text here.");
-inputMorce.setAttribute("placeholder", "Translates to Morce code here.");
+inputMorse.setAttribute("placeholder", "Translates to Morse code here.");
+radioButtonMorse.disabled=true;
 
 inputEnglish.addEventListener("change", (e)=>{
   console.log("coming inside change");
-  textToMorce();
-  inputMorce.disabled=true;
-inputEnglish.setAttribute("placeholder", "Enter the English text here.");
-inputMorce.setAttribute("placeholder", "Translates to Morce code here.");
+  inputMorse.disabled=true;
+  inputEnglish.setAttribute("placeholder", "Enter the English text here.");
+  inputMorse.setAttribute("placeholder", "Translates to Morse code here.");
+  textToMorse();
 });
 
 // inputEnglish.addEventListener("change", (event)=>{
@@ -136,24 +137,24 @@ inputMorce.setAttribute("placeholder", "Translates to Morce code here.");
 resetButton.addEventListener("click", (event) => {
   event.preventDefault();
   document.getElementById("textarea__input--english").value = "";
-  document.getElementById("textarea__input--morce").value = "";
-  inputMorce.disabled = true;
+  document.getElementById("textarea__input--morse").value = "";
+  inputMorse.disabled = true;
   inputEnglish.disabled = false;
 });
 
 radioButtonEnglish.addEventListener("click", (event) => {
   event.preventDefault();
-  inputMorce.disabled = true;
+  inputMorse.disabled = true;
   inputEnglish.disabled = false;
   inputEnglish.setAttribute("placeholder", "Enter the English text here.");
-  inputMorce.setAttribute("placeholder", "Translates to Morce code here.");
+  inputMorse.setAttribute("placeholder", "Translates to Morse code here.");
 });
 
-radioButtonMorce.addEventListener("click", (event) => {
+radioButtonMorse.addEventListener("click", (event) => {
   event.preventDefault();
   inputEnglish.disabled = true;
-  inputMorce.disabled = false;
-  inputMorce.setAttribute("placeholder", "Enter the Morce code here.");
+  inputMorse.disabled = false;
+  inputMorse.setAttribute("placeholder", "Enter the Morse code here.");
   inputEnglish.setAttribute("placeholder", "Translates to English text here.");
 });
 
@@ -161,26 +162,26 @@ let dot = document.querySelector(".dot");
 let slash = document.querySelector(".slash");
 let space = document.querySelector(".space");
 let back = document.querySelector(".back");
-let buttonsForMorce = document.querySelector(".container__buttons-for-morce");
+let buttonsForMorce = document.querySelector(".container__buttons-for-morse");
 
-var morcebtns = document
-  .querySelector(".container__buttons-for-morce")
+var morsebtns = document
+  .querySelector(".container__buttons-for-morse")
   .querySelectorAll("button");
-morcebtns.forEach((btn) => {
+morsebtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     if (btn.className == "dot") {
-      inputMorce.value += ".";
+      inputMorse.value += ".";
     } else if (btn.className == "slash") {
-      inputMorce.value += "/";
+      inputMorse.value += "/";
     } else if (btn.className == "space") {
-      inputMorce.value += " ";
+      inputMorse.value += " ";
     } else if (btn.className == "back") {
-      inputMorce.value = inputMorce.value.substr(
+      inputMorse.value = inputMorse.value.substr(
         0,
-        inputMorce.value.length - 1
+        inputMorse.value.length - 1
       );
     } else {
-      inputMorce.value += inputMorce.value;
+      inputMorse.value += inputMorse.value;
     }
     morse2text();
   });

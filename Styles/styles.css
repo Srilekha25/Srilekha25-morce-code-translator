@@ -118,14 +118,14 @@
 .body .landing-page .button__reset:hover .tooltip {
   visibility: visible;
 }
-.body .landing-page .section__morce--submit {
+.body .landing-page .section__morse--submit {
   position: relative;
 }
-.body .landing-page .section__morce--submit .tooltip {
+.body .landing-page .section__morse--submit .tooltip {
   position: absolute;
   left: 110%;
 }
-.body .landing-page .section__morce--submit .tooltip::after {
+.body .landing-page .section__morse--submit .tooltip::after {
   content: " ";
   position: absolute;
   top: 50%;
@@ -135,18 +135,18 @@
   border-style: solid;
   border-color: transparent #f5cac3 transparent transparent;
 }
-.body .landing-page .section__morce--submit:hover .tooltip {
+.body .landing-page .section__morse--submit:hover .tooltip {
   visibility: visible;
 }
-.body .landing-page .input__box--morce {
+.body .landing-page .input__box--morse {
   padding: 10px;
   border: 1px solid black;
   color: red;
 }
-.body .landing-page .input__box--morce:hover {
+.body .landing-page .input__box--morse:hover {
   background-color: red;
 }
-.body .landing-page .input__box--morce:hover i {
+.body .landing-page .input__box--morse:hover i {
   color: black;
 }
 .body .landing-page .reset-button {
@@ -163,25 +163,25 @@
 .body .landing-page textarea {
   border: 1px solid black;
 }
-.body .landing-page .button__morce--submit {
+.body .landing-page .button__morse--submit {
   display: none;
 }
 .body .landing-page label {
   margin: 10px;
   border-radius: 10px;
 }
-.body .landing-page .section__input--morce {
+.body .landing-page .section__input--morse {
   padding: 20px;
   margin: 20px;
   position: relative;
 }
-.body .landing-page .section__input--morce .textarea__input--morce {
+.body .landing-page .section__input--morse .textarea__input--morse {
   width: 70vw;
   height: 15vh;
   resize: vertical;
   border-radius: 10px;
 }
-.body .landing-page .section__input--morce .container__buttons-for-morce {
+.body .landing-page .section__input--morse .container__buttons-for-morse {
   position: absolute;
   display: flex;
   flex-direction: row;
