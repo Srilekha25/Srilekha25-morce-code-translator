@@ -1,8 +1,8 @@
 let resetButton = document.querySelector("#reset-button");
 let inputEnglish = document.querySelector("#textarea__input--english");
 let inputMorse = document.querySelector("#textarea__input--morse");
-let labelInput = document.querySelector("#input__box--eng");
-let labelMorse = document.querySelector("#input__box--morse");
+let labelInput = document.querySelector("#button__english--submit");
+let labelMorse = document.querySelector("#button__morse--submit");
 
 //Morse Buttons
 let buttonsForMorce = document.getElementById("container__buttons-for-morse");

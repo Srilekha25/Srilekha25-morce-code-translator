@@ -30,11 +30,11 @@
   left: 20px;
   border-radius: 10px;
 }
-.body .landing-page .section__input-box--english {
+.body .landing-page .section__input-for--english {
   padding: 20px;
   margin: 20px;
 }
-.body .landing-page .section__input-box--english .textarea__input--english {
+.body .landing-page .section__input-for--english .textarea__input--english {
   width: 70vw;
   height: 15vh;
   resize: vertical;
@@ -44,21 +44,18 @@
   display: flex;
   flex-direction: row;
 }
-.body .landing-page .section__english--submit {
+.body .landing-page .container__english--submit {
   position: relative;
 }
 .body .landing-page .button__english--submit {
-  display: none;
-}
-.body .landing-page .input__box--eng {
   padding: 10px;
   border: 1px solid black;
   color: green;
 }
-.body .landing-page .input__box--eng:hover {
+.body .landing-page .button__english--submit:hover {
   background-color: green;
 }
-.body .landing-page .input__box--eng:hover i {
+.body .landing-page .button__english--submit:hover i {
   color: black;
 }
 .body .landing-page .tooltip {
@@ -67,6 +64,7 @@
   background-color: #f5cac3;
   color: #fff;
   text-align: center;
+  border-radius: 6px;
   padding: 3px 0;
   position: absolute;
   z-index: 1;
@@ -75,7 +73,7 @@
   font-size: 12px;
   font-family: monospace;
 }
-.body .landing-page .section__english--submit .tooltip::after {
+.body .landing-page .container__english--submit .tooltip::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -85,11 +83,22 @@
   border-style: solid;
   border-color: transparent transparent transparent #f5cac3;
 }
-.body .landing-page .section__english--submit:hover .tooltip {
+.body .landing-page .container__english--submit:hover .tooltip {
   visibility: visible;
 }
 .body .landing-page .button__reset {
   position: relative;
+}
+.body .landing-page .button__reset .reset-button {
+  padding: 10px;
+  border: 1px solid black;
+  color: black;
+}
+.body .landing-page .button__reset .reset-button:hover {
+  background-color: black;
+}
+.body .landing-page .button__reset .reset-button:hover i {
+  color: white;
 }
 .body .landing-page .button__reset .tooltip {
   visibility: hidden;
@@ -118,14 +127,25 @@
 .body .landing-page .button__reset:hover .tooltip {
   visibility: visible;
 }
-.body .landing-page .section__morse--submit {
+.body .landing-page .container__morse--submit {
   position: relative;
 }
-.body .landing-page .section__morse--submit .tooltip {
+.body .landing-page .container__morse--submit .button__morse--submit {
+  padding: 10px;
+  border: 1px solid black;
+  color: red;
+}
+.body .landing-page .container__morse--submit .button__morse--submit:hover {
+  background-color: red;
+}
+.body .landing-page .container__morse--submit .button__morse--submit:hover i {
+  color: black;
+}
+.body .landing-page .container__morse--submit .tooltip {
   position: absolute;
   left: 110%;
 }
-.body .landing-page .section__morse--submit .tooltip::after {
+.body .landing-page .container__morse--submit .tooltip::after {
   content: " ";
   position: absolute;
   top: 50%;
@@ -135,59 +155,34 @@
   border-style: solid;
   border-color: transparent #f5cac3 transparent transparent;
 }
-.body .landing-page .section__morse--submit:hover .tooltip {
+.body .landing-page .container__morse--submit:hover .tooltip {
   visibility: visible;
-}
-.body .landing-page .input__box--morse {
-  padding: 10px;
-  border: 1px solid black;
-  color: red;
-}
-.body .landing-page .input__box--morse:hover {
-  background-color: red;
-}
-.body .landing-page .input__box--morse:hover i {
-  color: black;
-}
-.body .landing-page .reset-button {
-  padding: 10px;
-  border: 1px solid black;
-  color: black;
-}
-.body .landing-page .reset-button:hover {
-  background-color: black;
-}
-.body .landing-page .reset-button:hover i {
-  color: white;
 }
 .body .landing-page textarea {
   border: 1px solid black;
-}
-.body .landing-page .button__morse--submit {
-  display: none;
 }
 .body .landing-page label {
   margin: 10px;
   border-radius: 10px;
 }
-.body .landing-page .section__input--morse {
+.body .landing-page .container__input-for--morse {
   padding: 20px;
   margin: 20px;
   position: relative;
 }
-.body .landing-page .section__input--morse .textarea__input--morse {
+.body .landing-page .container__input-for--morse .textarea__input--morse {
   width: 70vw;
   height: 15vh;
   resize: vertical;
   border-radius: 10px;
   margin-bottom: 0%;
 }
-.body .landing-page .section__input--morse .container__buttons-for-morse {
+.body .landing-page .container__input-for--morse .container__buttons-for-morse {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.body .landing-page .section__input--morse .container__buttons-for-morse button {
+.body .landing-page .container__input-for--morse .container__buttons-for-morse button {
   background-color: #f5cac3;
   border: 1px solid black;
   color: black;
@@ -206,7 +201,7 @@
   color: #f5cac3;
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 880px) {
   .body {
     font-family: "Roboto Mono", monospace;
     margin-top: 5%;

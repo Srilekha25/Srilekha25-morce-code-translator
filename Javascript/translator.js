@@ -8,7 +8,6 @@ export const textToMorse = () => {
   let splittedInputValue = inputValue.split("");
   let translatedToMorse = splittedInputValue.map((character) => {
     if (!mapping[character]) {
-      //return "�";
       return "🤷";
     } else {
       return mapping[character];
@@ -27,11 +26,11 @@ export const getKey = (obj,val) =>{
 //Morse to text convertor
 export const morseToText = () => {
   let morceCode = document.getElementById("textarea__input--morse").value;
-  let arr1 = morceCode.split(" ");
+  let splittedArray = morceCode.split(" ");
 
-  let arr2 = arr1.map((x) => {
-    if (getKey(mapping, x)) {
-      return getKey(mapping, x);
+  let arr2 = splittedArray.map((character) => {
+    if (getKey(mapping, character)) {
+      return getKey(mapping, character);
     } else if (x == "") {
       return " ";
     }else {

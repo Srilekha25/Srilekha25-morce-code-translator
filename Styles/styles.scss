@@ -31,7 +31,7 @@
       left: 20px;
       border-radius: 10px;
     }
-    .section__input-box--english {
+    .section__input-for--english {
       padding: 20px;
       margin: 20px;
       .textarea__input--english {
@@ -46,29 +46,28 @@
       display: flex;
       flex-direction: row;
     }
-    .section__english--submit {
+    .container__english--submit {
       position: relative;
     }
     .button__english--submit {
-      display: none;
-    }
-    .input__box--eng {
       padding: 10px;
       border: 1px solid black;
       color: green;
     }
-    .input__box--eng:hover {
+    .button__english--submit:hover {
       background-color: green;
       i {
         color: black;
       }
     }
+
     .tooltip {
       visibility: hidden;
       width: 100px;
       background-color: #f5cac3;
       color: #fff;
       text-align: center;
+      border-radius: 6px;
       padding: 3px 0;
       position: absolute;
       z-index: 1;
@@ -77,7 +76,7 @@
       font-size: 12px;
       font-family: monospace;
     }
-    .section__english--submit .tooltip::after {
+    .container__english--submit .tooltip::after {
       content: "";
       position: absolute;
       top: 50%;
@@ -87,12 +86,23 @@
       border-style: solid;
       border-color: transparent transparent transparent #f5cac3;
     }
-    .section__english--submit:hover .tooltip {
+    .container__english--submit:hover .tooltip {
       visibility: visible;
     }
 
     .button__reset {
       position: relative;
+      .reset-button {
+        padding: 10px;
+        border: 1px solid black;
+        color: black;
+      }
+      .reset-button:hover {
+        background-color: black;
+        i {
+          color: white;
+        }
+      }
     }
     .button__reset .tooltip {
       visibility: hidden;
@@ -123,15 +133,27 @@
       visibility: visible;
     }
 
-    .section__morse--submit {
+    .container__morse--submit {
       position: relative;
+
+      .button__morse--submit {
+        padding: 10px;
+        border: 1px solid black;
+        color: red;
+      }
+      .button__morse--submit:hover {
+        background-color: red;
+        i {
+          color: black;
+        }
+      }
       .tooltip {
         position: absolute;
         left: 110%;
       }
     }
 
-    .section__morse--submit .tooltip::after {
+    .container__morse--submit .tooltip::after {
       content: " ";
       position: absolute;
       top: 50%;
@@ -141,45 +163,19 @@
       border-style: solid;
       border-color: transparent #f5cac3 transparent transparent;
     }
-    .section__morse--submit:hover .tooltip {
+    .container__morse--submit:hover .tooltip {
       visibility: visible;
     }
 
-    .input__box--morse {
-      padding: 10px;
-      border: 1px solid black;
-      color: red;
-    }
-    .input__box--morse:hover {
-      background-color: red;
-      i {
-        color: black;
-      }
-    }
-    .reset-button {
-      padding: 10px;
-      border: 1px solid black;
-      color: black;
-    }
-    .reset-button:hover {
-      background-color: black;
-      i {
-        color: white;
-      }
-    }
     textarea {
       border: 1px solid black;
-    }
-
-    .button__morse--submit {
-      display: none;
     }
     label {
       margin: 10px;
       border-radius: 10px;
     }
 
-    .section__input--morse {
+    .container__input-for--morse {
       padding: 20px;
       margin: 20px;
       position: relative;
@@ -209,7 +205,6 @@
           margin: 4px 2px;
           cursor: pointer;
         }
-       
       }
     }
 
@@ -221,65 +216,61 @@
   }
 }
 
-@media only screen and (max-width: 770px){
+@media only screen and (max-width: 880px) {
   .body {
     font-family: "Roboto Mono", monospace;
     margin-top: 5%;
     background-color: #84a59d;
     color: white;
-  .container__buttons-for-morse {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    .container__buttons-for-morse {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
 
-    button {
-      background-color: #f5cac3;
-      border: 1px solid black;
-      color: black;
-      font-weight: bolder;
-      padding: 1.5% 10%;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 2px 1px;
-      cursor: pointer;
+      button {
+        background-color: #f5cac3;
+        border: 1px solid black;
+        color: black;
+        font-weight: bolder;
+        padding: 1.5% 10%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px 1px;
+        cursor: pointer;
+      }
+      .tooltip {
+        font-size: 3px;
+      }
     }
-    .tooltip{
-      font-size: 3px;
-    }
-   
   }
- 
-}
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
   .body {
     font-family: "Roboto Mono", monospace;
     margin-top: 3%;
     background-color: #84a59d;
     color: white;
-  .container__buttons-for-morse {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    .container__buttons-for-morse {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
 
-    button {
-      background-color: #f5cac3;
-      border: 1px solid black;
-      color: black;
-      font-weight: bolder;
-      padding: 1% 10%;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 2px 1px;
-      cursor: pointer;
+      button {
+        background-color: #f5cac3;
+        border: 1px solid black;
+        color: black;
+        font-weight: bolder;
+        padding: 1% 10%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px 1px;
+        cursor: pointer;
+      }
     }
-   
   }
- 
-}
 }

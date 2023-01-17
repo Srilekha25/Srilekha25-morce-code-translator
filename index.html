@@ -18,56 +18,45 @@
   <body class="body">
     <section class="landing-page">
       <h1>Morse Code Translator</h1>
-      <div class="section__input-box--english">
+      <div class="section__input-for--english">
         <h3>English</h3>
         <textarea
           name="textarea__input--english"
           id="textarea__input--english"
           class="textarea__input--english"
           placeholder=""
-    
         ></textarea>
       </div>
       <!-- Buttons for Translator -->
       <div class="container__buttons--flex--row">
-        <div class="section__english--submit">
-          <input
-            type="radio"
+        <div class="container__english--submit">
+          <label
+            for="button__english--submit"
             class="button__english--submit"
             id="button__english--submit"
-            checked="true"
-          />
-          <label
-            for="input__box--eng"
-            class="input__box--eng"
-            id="input__box--eng"
             ><i class="fa-solid fa-arrow-down"></i
           ></label>
           <span class="tooltip">Translate to Morse</span>
         </div>
+
         <div class="button__reset" id="button__reset">
           <label for="reset-button" class="reset-button" id="reset-button"
             ><i class="fa fa-refresh" aria-hidden="true"></i
           ></label>
           <span class="tooltip">Clear</span>
         </div>
-        <div class="section__morse--submit">
-          <input
-            type="radio"
+
+        <div class="container__morse--submit">
+          <label
+            for="button__morse--submit"
             class="button__morse--submit"
             id="button__morse--submit"
-            aria-checked="false"
-          />
-          <label
-            for="input__box--morse"
-            class="input__box--morse"
-            id="input__box--morse"
             ><i class="fa-solid fa-arrow-up"></i
           ></label>
-          <span class="tooltip">Translate to English</span>
+          <span class="tooltip">Translate to Morse</span>
         </div>
       </div>
-      <div class="section__input--morse">
+      <div class="container__input-for--morse">
         <h3>Morse</h3>
         <textarea
           name="textarea__input--morse"
@@ -75,7 +64,10 @@
           class="textarea__input--morse"
           placeholder=""
         ></textarea>
-        <div class="container__buttons-for-morse" id="container__buttons-for-morse">
+        <div
+          class="container__buttons-for-morse"
+          id="container__buttons-for-morse"
+        >
           <button class="dot">.</button>
           <button class="slash">/</button>
           <button class="space">␣</button>

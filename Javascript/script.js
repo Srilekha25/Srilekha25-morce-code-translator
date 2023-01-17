@@ -32,6 +32,8 @@ inputEnglish.addEventListener("input", (e) => {
     inputEnglish.disabled = false;
     inputEnglish.setAttribute("placeholder", "Enter the English text here.");
     inputMorse.setAttribute("placeholder", "Translates to Morse code here.");
+    document.getElementById("textarea__input--english").value = "";
+    document.getElementById("textarea__input--morse").value = "";
     buttonsForMorce.style.display="none";
   });
   
@@ -41,6 +43,8 @@ inputEnglish.addEventListener("input", (e) => {
     inputMorse.disabled = false;
     inputMorse.setAttribute("placeholder", "Enter the Morse code here.");
     inputEnglish.setAttribute("placeholder", "Translates to English text here.");
+    document.getElementById("textarea__input--english").value = "";
+    document.getElementById("textarea__input--morse").value = "";
     buttonsForMorce.style.display="flex";
   });
   
