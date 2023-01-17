@@ -55,7 +55,9 @@ inputEnglish.addEventListener("input", (e) => {
         inputMorse.value += ".";
       } else if (btn.className == "slash") {
         inputMorse.value += "/";
-      } else if (btn.className == "space") {
+      } else if (btn.className == "dash"){
+        inputMorse.value += "-";
+      }else if (btn.className == "space") {
         inputMorse.value += " ";
       } else if (btn.className == "back") {
         inputMorse.value = inputMorse.value.substr(
@@ -63,9 +65,9 @@ inputEnglish.addEventListener("input", (e) => {
           inputMorse.value.length - 1
         );
       } else {
-        inputMorse.value += inputMorse.value;
+        inputMorse.value;
       }
-      morseToText();
+      inputMorse.dispatchEvent(new Event('input'));
     });
   });
   

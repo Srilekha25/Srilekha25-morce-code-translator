@@ -17,7 +17,7 @@
   - Morse Code into English text - Done
 
 - Handle spaces properly - Done
-- Must have at least two test suites.
+- Must have at least two test suites - Done
 
 
 ```js
@@ -77,7 +77,7 @@
 
 ## Submission
 
-- Create an empty main branch(features/morce-code-translator)
+- Create an empty main branch - created the branch(features/morce-code-translator).
 - Do all work in develop branch - Done
 - Add coach who is doing 1:1 as a contributor to your repo - Added Alex
 - Tag coach in PR from develop branch into main for 1:1

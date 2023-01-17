@@ -6,7 +6,7 @@ let labelMorse = document.querySelector("#button__morse--submit");
 
 //Morse Buttons
 let buttonsForMorce = document.getElementById("container__buttons-for-morse");
-var morsebtns = document
+let morsebtns = document
   .querySelector(".container__buttons-for-morse")
   .querySelectorAll("button");
 
