@@ -27,6 +27,8 @@ export const getKey = (obj,val) =>{
   return Object.keys(obj).find((key) => obj[key] === val);
 };
 
+console.log("spaces:", getKey(mapping, "/"));
+
 export const removeSpaces = (arr) =>{
    return arr.join("").replace(/\s\s+/g, " ");
 }
@@ -49,7 +51,5 @@ export const morseToText = () => {
   let text = removeSpaces(arr2);
   document.getElementById("textarea__input--english").value = text;
 }
-
-console.log("remove",removeSpaces([" ", " ", " ", " A"]));
 
 export default {getValue, getKey, removeSpaces};

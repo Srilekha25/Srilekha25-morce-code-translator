@@ -29,6 +29,9 @@ describe("getKey() tests", () => {
   it("should return the correct key", () => {
     expect(getKey(mapping, ".-")).toBe("A");
   });
+  it("should return the correct key", () => {
+    expect(getKey(mapping, "/")).toBe(" ");
+  });
 });
 
 describe("removeSpaces() tests", () => {
