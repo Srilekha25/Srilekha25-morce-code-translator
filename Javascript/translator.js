@@ -31,7 +31,7 @@ export const morseToText = () => {
   let arr2 = splittedArray.map((character) => {
     if (getKey(mapping, character)) {
       return getKey(mapping, character);
-    } else if (x == "") {
+    } else if (character == "") {
       return " ";
     }else {
       return "🤷";
