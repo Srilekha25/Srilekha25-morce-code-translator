@@ -1,5 +1,11 @@
 # Srilekha25-morce-code-translator
 
+## Git Repository
+https://github.com/Srilekha25/Srilekha25-morce-code-translator.git
+
+## Live page Link
+https://srilekha25.github.io/Srilekha25-morce-code-translator/
+  
 # Morse Code Translator
 
 ## Outline
@@ -74,19 +80,3 @@
 }
 
 ```
-
-## Submission
-
-- Create an empty main branch - created the branch(features/morce-code-translator).
-- Do all work in develop branch - Done
-- Add coach who is doing 1:1 as a contributor to your repo - Added Alex
-- Tag coach in PR from develop branch into main for 1:1
-
-
-## Git Repository
-https://github.com/Srilekha25/Srilekha25-morce-code-translator.git
-
-## Live page Link
-https://srilekha25.github.io/Srilekha25-morce-code-translator/
-
-(Published in branch for now)
