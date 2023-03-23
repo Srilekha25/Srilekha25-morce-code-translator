@@ -14,15 +14,15 @@ https://srilekha25.github.io/Srilekha25-morce-code-translator/
 - The User Interface will allows user to english text and morce code in different textareas and it will be live translated.
 - Included some buttons for Morse translator.
 
-## MVP
+This project contains:
 
-- Create a user interface that allows the user to either input some English text or some Morse Code - Done
-- Create JS functions that would allow the user to:
+- A user interface that allows the user to either input some English text or some Morse Code.
+- JS functions that would allow the user to:
 
-  - translate their English text into Morse Code - Done
-  - Morse Code into English text - Done
+  - translate their English text into Morse Code.
+  - Morse Code into English text.
 
-- Handle spaces properly - Done
+- Handles spaces properly.
 - Must have at least two test suites - Done
 
 
